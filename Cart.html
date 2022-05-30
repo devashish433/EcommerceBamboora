@@ -1,15 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CartStyle.css">
-    <script src="Cart.js"></script>    <script src='https://libs.na.bambora.com/customcheckout/1/customcheckout.js'></script>
-    <title>Document</title>
-</head>
-<body>
-    
+<html> <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<script src='https://libs.na.bambora.com/customcheckout/1/customcheckout.js'></script>
+    </head>
+    <body>
 <div class="container">
     <form id="checkout-form">
         <div id="card-number"></div>
@@ -26,14 +20,6 @@
         <div id="feedback"></div>
     </form>
 </div>
-    
-   <script>
-        var customCheckout = customcheckout();
-        var cardNumber = customCheckout.create('card-number')
-        cardNumber.mount('#card-number');
-        // ...
-    </script>
-</body>
+        <script src="cart.js"> </script>
+    </body>
 </html>
-
-
