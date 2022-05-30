@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<title> Checkout </title> 
+
+<link rel="stylesheet" type="text/css" href="https://libs.na.bambora.com/checkouttheme/0.1.0/ui.bambora/ui.bambora.1.1.0.css">
+<link rel="stylesheet" type="text/css" href="https://libs.na.bambora.com/checkouttheme/0.1.0/style.css">
+<script src="Cart.js"></script>
+<script src="https://api.na.bambora.com/scripts/tokenization/tokens"></script>
+<script src="https://api.na.bambora.com/v1/profiles"></script>
+<script src="https://api.na.bambora.com/v1/payments"></script>
+</head>
+
+<body>
+<script src="https://libs.na.bambora.com/checkouttheme/0.1.0/checkouttheme.min.js"></script>    
+<script> CheckoutTheme.init(); 
+const request = new XMLHttpRequest();
+request.open("GET",  "https:api.na.bambora.com/scripts/tokenization/tokens")
+request.send();
+request.onload = ()=>{
+    console.log(request);
+    if(request.status === 200){
+        console.log(JSON.parse(request.response));
+    } else {
+        console.log(request)
+        console.log('error $(request.status)')
+    }
+}
+
+</script>
+
+
+
+</body>
+
+</html>
