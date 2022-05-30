@@ -1,4 +1,3 @@
-
 (function() {
   var customCheckout = customcheckout();
 
@@ -143,8 +142,7 @@
 
         var bootStrapParent = document.getElementById(id + '-bootstrap');
         if (bootStrapParent !== null) {
-          bootStrapParent.classList.remove('has-error');
-          bootStrapParent.classList.add('has-success');
+          bootStrapParent.className = 'form-group has-feedback has-success';
         }
       } else {
         console.log('showErrorForId: Could not find ' + id);
@@ -163,8 +161,7 @@
 
         var bootStrapParent = document.getElementById(id + '-bootstrap');
         if (bootStrapParent !== null) {
-          bootStrapParent.classList.add('has-error');
-          bootStrapParent.classList.remove('has-success');
+          bootStrapParent.className = 'form-group has-feedback has-error ';
         }
       } else {
         console.log('showErrorForId: Could not find ' + id);
